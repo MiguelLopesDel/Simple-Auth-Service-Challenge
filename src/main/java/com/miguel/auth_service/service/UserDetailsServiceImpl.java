@@ -1,5 +1,6 @@
 package com.miguel.auth_service.service;
 
+import com.miguel.auth_service.domain.UserAuthenticated;
 import lombok.AllArgsConstructor;
 import org.springframework.security.core.userdetails.UserDetails;
 import org.springframework.security.core.userdetails.UserDetailsService;

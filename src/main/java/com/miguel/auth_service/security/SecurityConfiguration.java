@@ -9,7 +9,6 @@ import com.nimbusds.jose.proc.SecurityContext;
 import jakarta.servlet.http.HttpServletResponse;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
-import org.springframework.security.config.Customizer;
 import org.springframework.security.config.annotation.web.builders.HttpSecurity;
 import org.springframework.security.config.annotation.web.configuration.EnableWebSecurity;
 import org.springframework.security.config.annotation.web.configurers.AbstractHttpConfigurer;
@@ -50,7 +49,6 @@ public class SecurityConfiguration {
                 .oauth2ResourceServer(
                         conf -> conf.jwt(jwt -> jwt.decoder(jwtDecoder()))
                 )
-                .httpBasic(Customizer.withDefaults())
                 .exceptionHandling(exception -> exception
                         .authenticationEntryPoint((request, response, ex) -> response.sendError(HttpServletResponse.SC_UNAUTHORIZED, "Invalid Token"))
                 )

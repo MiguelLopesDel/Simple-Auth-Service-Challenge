@@ -1,6 +1,5 @@
-package com.miguel.auth_service.service;
+package com.miguel.auth_service.domain;
 
-import com.miguel.auth_service.domain.User;
 import lombok.AllArgsConstructor;
 import org.springframework.security.core.GrantedAuthority;
 import org.springframework.security.core.userdetails.UserDetails;
